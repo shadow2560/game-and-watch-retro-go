@@ -754,6 +754,7 @@ GNUBOY_C_INCLUDES +=  \
 -ICore/Src/porting/lib/lzma \
 -Iretro-go-stm32/components/odroid \
 -Iretro-go-stm32/gnuboy-go/components \
+-I.
 
 TGBDUAL_C_INCLUDES +=  \
 -ICore/Inc \
@@ -763,7 +764,7 @@ TGBDUAL_C_INCLUDES +=  \
 -Itgbdual-go \
 -Itgbdual-go/gb_core \
 -Itgbdual-go/libretro \
--I./
+-I.
 
 NES_C_INCLUDES +=  \
 -ICore/Inc \
@@ -774,7 +775,7 @@ NES_C_INCLUDES +=  \
 -Iretro-go-stm32/nofrendo-go/components/nofrendo/nes \
 -Iretro-go-stm32/nofrendo-go/components/nofrendo \
 -Iretro-go-stm32/components/odroid \
--I./
+-I.
 
 NES_FCEU_C_INCLUDES +=  \
 -ICore/Inc \
@@ -782,7 +783,7 @@ NES_FCEU_C_INCLUDES +=  \
 -ICore/Src/porting/lib/lzma \
 -Iretro-go-stm32/components/odroid \
 -Ifceumm-go/src/ \
--I./
+-I.
 
 SMSPLUSGX_C_INCLUDES +=  \
 -ICore/Inc \
@@ -792,7 +793,7 @@ SMSPLUSGX_C_INCLUDES +=  \
 -Iretro-go-stm32/smsplusgx-go/components/smsplus \
 -Iretro-go-stm32/smsplusgx-go/components/smsplus/cpu \
 -Iretro-go-stm32/smsplusgx-go/components/smsplus/sound \
--I./
+-I.
 
 PCE_C_INCLUDES +=  \
 -ICore/Inc \
@@ -800,7 +801,7 @@ PCE_C_INCLUDES +=  \
 -ICore/Src/porting/lib/lzma \
 -Iretro-go-stm32/components/odroid \
 -Iretro-go-stm32/pce-go/components/pce-go \
--I./
+-I.
 
 GW_C_INCLUDES +=  \
 -ICore/Inc \
@@ -810,7 +811,7 @@ GW_C_INCLUDES +=  \
 -ILCD-Game-Emulator/src \
 -ILCD-Game-Emulator/src/cpus \
 -ILCD-Game-Emulator/src/gw_sys \
--I./
+-I.
 
 MD_C_INCLUDES +=  \
 -ICore/Inc \
@@ -824,7 +825,7 @@ MD_C_INCLUDES +=  \
 -Igwenesis/src/vdp \
 -Igwenesis/src/io \
 -Igwenesis/src/savestate \
--I./
+-I.
 
 
 C_INCLUDES +=  \
@@ -834,7 +835,7 @@ C_INCLUDES +=  \
 -ICore/Src/porting/lib/littlefs/ \
 -ICore/Src/porting/lib/tamp/tamp/_c_src \
 -Iretro-go-stm32/components/odroid \
--I./
+-I.
 
 MSX_C_INCLUDES += \
 -ICore/Inc \
@@ -862,21 +863,21 @@ MSX_C_INCLUDES += \
 -I$(CORE_MSX)/Src/Z80 \
 -I$(CORE_MSX)/Src/Input \
 -I$(CORE_MSX)/Src/Libretro \
--I./
+-I.
 
 WSV_C_INCLUDES += \
 -ICore/Inc \
 -ICore/Src/porting/lib \
 -ICore/Src/porting/lib/lzma \
 -Ipotator/common \
--I./
+-I.
 
 A7800_C_INCLUDES += \
 -ICore/Inc \
 -ICore/Src/porting/lib \
 -ICore/Src/porting/lib/lzma \
 -Iprosystem-go/core \
--I./
+-I.
 
 AMSTRAD_C_INCLUDES +=  \
 -ICore/Inc \
@@ -884,7 +885,7 @@ AMSTRAD_C_INCLUDES +=  \
 -ICore/Src/porting/lib/lzma \
 -Iretro-go-stm32/components/odroid \
 -Icaprice32-go/cap32 \
--I./
+-I.
 
 VIDEOPAC_C_INCLUDES +=  \
 -ICore/Inc \
@@ -894,23 +895,23 @@ VIDEOPAC_C_INCLUDES +=  \
 -Io2em-go/src \
 -Io2em-go/libretro-common/include \
 -Io2em-go/allegrowrapper \
--I./
+-I.
 
 ZELDA3_C_INCLUDES +=  \
 -ICore/Inc \
 -ICore/Src/porting/lib \
 -ICore/Src/porting/lib/lzma \
 -Iretro-go-stm32/components/odroid \
--Izelda3/ \
--I./
+-Izelda3 \
+-I.
 
 SMW_C_INCLUDES +=  \
 -ICore/Inc \
 -ICore/Src/porting/lib \
 -ICore/Src/porting/lib/lzma \
 -Iretro-go-stm32/components/odroid \
--Ismw/ \
--I./
+-Ismw \
+-I.
 
 include Makefile.common
 
