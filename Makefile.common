@@ -110,7 +110,21 @@ INTFLASH_BANK = 1
 endif
 endif
 
+FORCE_PYOCD ?= 0
+GNWMANAGER_PATH ?= gnwmanager
+ifeq ($(FORCE_PYOCD),1)
+ifneq ($(GNWMANAGER_PATH),)
+GNWMANAGER=$(GNWMANAGER_PATH) -b pyocd
+else
+GNWMANAGER= gnwmanager -b pyocd
+endif
+else
+ifeq ($(GNWMANAGER_PATH),)
 GNWMANAGER = gnwmanager
+else
+GNWMANAGER = $(GNWMANAGER_PATH)
+endif
+endif
 
 # Configure external flash size in MB (Megabytes)
 EXTFLASH_SIZE_MB ?= 1
@@ -694,7 +708,7 @@ ifeq (${CHECK_TOOLS},1)
 CheckTools:
 	@# Check that the tools in the toolchain exist
 	$(V)/usr/bin/env bash -c " \
-		for tool in $(CC) $(CP) $(SZ) $(GDB) $(DUMP); do \
+		for tool in $(CC) $(CP) $(SZ) $(GDB) $(DUMP) $(GNWMANAGER_PATH); do \
 		which \$$tool 2> /dev/null > /dev/null || \
 		( \
 			echo -e \"\nCannot find \$$tool\n\" && \
@@ -1178,6 +1192,8 @@ help:
 	@echo "  MSX_USE_BANK_2=$(MSX_USE_BANK_2)"
 	@echo "  GCC_PATH=$(GCC_PATH)"
 	@echo "  PREFIX=$(PREFIX)"
+	@echo "  FORCE_PYOCD=$(FORCE_PYOCD)"
+	@echo "  GNWMANAGER_PATH=$(GNWMANAGER_PATH)"
 	@echo "  CODEPAGE=$(CODEPAGE)"
 	@echo "  UICODEPAGE=$(UICODEPAGE)"
 	@echo "  COVERFLOW=$(COVERFLOW)"
